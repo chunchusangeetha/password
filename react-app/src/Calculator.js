@@ -23,6 +23,7 @@ export default function Calculator() {
           />
         </div>
         <div>
+          <div>
           <button
             onClick={() => {
               setNum(num + '1');
@@ -51,7 +52,9 @@ export default function Calculator() {
           >
             C
           </button>
+          </div>
           <br />
+          <div>
           <button
             onClick={() => {
               setNum(num + '4');
@@ -80,7 +83,9 @@ export default function Calculator() {
           >
             +
           </button>
+          </div>
           <br />
+          <div>
           <button
             onClick={() => {
               setNum(num + '7');
@@ -109,7 +114,9 @@ export default function Calculator() {
           >
             -
           </button>
+          </div>
           <br />
+          <div>
           <button
             onClick={() => {
               setNum(num + '*');
@@ -129,7 +136,7 @@ export default function Calculator() {
               setNum(num + '/');
             }}
           >
-            /git
+            /
           </button>
           <button
             onClick={() => {
@@ -138,6 +145,7 @@ export default function Calculator() {
           >
             =
           </button>
+          </div>
         </div>
       </div>
     </div>
