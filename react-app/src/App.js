@@ -5,8 +5,8 @@ import Calculator from './Calculator';
 function App() {
   return (
     <div className="App">
-      <h1>Wellcome to React</h1>
-      <Calculator/>
+      <h1>React</h1>
+      <Calculator />
     </div>
   );
 }
