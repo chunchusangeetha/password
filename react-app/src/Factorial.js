@@ -8,7 +8,8 @@ export default function Factorial() {
         for (let i = 1; i <= num; i++) {
             fact = fact * i;
         }
-        setValue("Factorial of " + num + " is " + fact)
+        setValue("Factorial of " + num + " is " + fact);
+        document.querySelector("input").value = "";
         //alert("Factorial of " + num + " is " + fact);
         //console.log("Factorial clicked");
     }
