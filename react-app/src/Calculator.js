@@ -140,6 +140,7 @@ export default function Calculator() {
           </button>
           <button
             onClick={() => {
+              // eslint-disable-next-line
               setNum(eval(num));
             }}
           >
