@@ -1,31 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
+
 export default function Factorial() {
-    const [value, setValue] = React.useState("");
+    const [value, setValue] = useState("");
+    const [num, setNum] = useState("");
+
     const factorialclick = (event) => {
         event.preventDefault();
-        let num = document.querySelector("input").value;
         let fact = 1;
         for (let i = 1; i <= num; i++) {
             fact = fact * i;
         }
-        setValue("Factorial of " + num + " is " + fact);
-        document.querySelector("input").value = "";
-        //alert("Factorial of " + num + " is " + fact);
-        //console.log("Factorial clicked");
-    }
+        if (num) {
+            setValue("Factorial of " + num + " is " + fact);
+            setNum(""); 
+        }else {
+            setValue("Please enter a number");
+        }
+    };
 
     return (
-        <div>
+        <div className="factorial">
             <h2>Factorial</h2>
-            <div>
-                <input type="text" placeholder="enter the value" />
-            </div>
-            <div>
+            <div className="factorial-input">
+                <input
+                    type="text"
+                    placeholder="Enter the value"
+                    value={num}
+                    onChange={(e) => setNum(e.target.value)} // Update state on input change
+                />
                 <button onClick={factorialclick}>Calculate</button>
-            </div>
-            <div>
-                <p>{value}</p>
+                {value && <p>{value}</p>}
             </div>
         </div>
-    )
+    );
 }
