@@ -13,7 +13,7 @@ export default function Calculator() {
   return (
     <div className="main">
       <h2>Calculator</h2>
-      <div>
+      <div className="calculator">
         <div>
           <input
             type="text"
@@ -140,6 +140,7 @@ export default function Calculator() {
           </button>
           <button
             onClick={() => {
+              // eslint-disable-next-line
               setNum(eval(num));
             }}
           >

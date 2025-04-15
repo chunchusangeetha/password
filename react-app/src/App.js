@@ -1,12 +1,15 @@
 
 import './App.css';
+import Factorial from './Factorial';
 import Calculator from './Calculator';
+import SignUp from './Sign-up';
 
 function App() {
   return (
     <div className="App">
-      <h1>Wellcome to React</h1>
-      <Calculator/>
+      <Factorial />
+      <Calculator />
+      <SignUp />
     </div>
   );
 }
