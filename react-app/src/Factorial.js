@@ -12,8 +12,8 @@ export default function Factorial() {
         }
         if (num) {
             setValue("Factorial of " + num + " is " + fact);
-            setNum(""); 
-        }else {
+            setNum("");
+        } else {
             setValue("Please enter a number");
         }
     };
