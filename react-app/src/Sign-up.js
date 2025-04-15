@@ -10,18 +10,17 @@ export default function SignUp() {
     const [submittedUser, setSubmittedUser] = useState(null);
 
     function handleChange(event) {
-        const { name, value } = event.target;
         setFormData((prevData) => ({
             ...prevData,
-            [name]: value
+            [event.target.name]: event.target.value
         }));
     }
 
     function handleSubmit(event) {
         event.preventDefault();
         console.log("Form submitted:", formData);
-        setSubmittedUser(formData); // update displayed data
-        setFormData({ name: "", email: "", password: "" }); // optional: reset form
+        setSubmittedUser(formData);
+        setFormData({ name: "", email: "", password: "" });
     }
 
     return (
